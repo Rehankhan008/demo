@@ -1,4 +1,4 @@
-// this is comment 
-output hello1{
-  value = "hello"
+varibale username {}
+output printname {
+value "hello, {var.username}"
 }
