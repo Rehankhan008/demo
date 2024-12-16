@@ -11,10 +11,10 @@ provider "random" {
   # Configuration options
 }
 
-
-variable username {
-default = "rehan"
+variable "username" {
+  default = "rehan"
 }
-output printname {
-value "hello, {var.username}"
+
+output "printname" {
+  value = "hello, ${var.username}"
 }
