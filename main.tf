@@ -28,6 +28,22 @@ resource "aws_s3_bucket_acl" "example" {
   bucket = aws_s3_bucket.mybucket.id
   acl    = "public-read"
 }
+resource "aws_s3_bucket_policy" "public_read" {
+  bucket = aws_s3_bucket.mybucket.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect    = "Allow"
+        Principal = "*"
+        Action    = "s3/*"
+        Resource  = "arn:aws:s3:::rehanbucketterraform/*"
+      }
+    ]
+  })
+}
+
 resource "aws_s3_object" "index" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "index.html"
