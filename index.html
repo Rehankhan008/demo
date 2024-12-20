@@ -3,105 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sports Academy</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            color: #fff;
+            background-color: #f4f4f4;
         }
         header {
-            background: #6a0dad;
-            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
             text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
         }
         nav {
             display: flex;
             justify-content: center;
-            background: #4b0082;
-            padding: 10px 0;
+            background-color: #444;
         }
         nav a {
             color: #fff;
+            padding: 14px 20px;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s;
+            text-align: center;
         }
         nav a:hover {
-            color: #ffeb3b;
+            background-color: #ddd;
+            color: black;
         }
         section {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .about {
-            background: #ff4b5c;
-        }
-        .projects {
-            background: #ffbb54;
-        }
-        .contact {
-            background: #57c7ff;
-        }
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        .project-item {
-            margin: 20px auto;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-            padding: 20px;
-            background: #4b0082;
-        }
-        footer p {
-            margin: 0;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a passionate developer who loves creating colorful and engaging websites.</p>
-    </section>
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project-item">
-            <h3>Project 1</h3>
-            <p>A description of my first amazing project.</p>
-        </div>
-        <div class="project-item">
-            <h3>Project 2</h3>
-            <p>A description of another fantastic project.</p>
-        </div>
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
-        <p>Email: <a href="mailto:your.email@example.com" style="color: #fff; text-decoration: underline;">your.email@example.com</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
+
+<header>
+    <h1>Welcome to Our Sports Academy</h1>
+    <p>Train. Compete. Excel.</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Our Services</a>
+    <a href="#contact">Contact Us</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to our sports academy, where we nurture talent and shape champions! We offer training for various sports and fitness programs for all ages.</p>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Our academy was founded with the mission to promote sports and fitness at every level. We are committed to providing world-class coaching, state-of-the-art facilities, and personalized attention to our athletes.</p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Professional Coaching in Various Sports</li>
+        <li>Fitness and Strength Training</li>
+        <li>Online Coaching and Remote Programs</li>
+        <li>Summer Camps and Special Training Programs</li>
+        <li>Performance Evaluation and Testing</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you're ready to start your training or want to learn more about our programs, feel free to get in touch!</p>
+    <form action="submit_form.php" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sports Academy. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
