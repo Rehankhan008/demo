@@ -45,7 +45,7 @@ resource "aws_s3_object" "error" {
   acl    = "public-read"
   contant_type = "text/html"
   }
-resource "aws_s3_bucket_website_configuration" "example" {
+resource "aws_s3_bucket_website_configuration" "website" {
   bucket = aws_s3_bucket.mybucket.id
 
   index_document {
