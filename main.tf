@@ -37,7 +37,7 @@ resource "aws_s3_bucket_policy" "public_read" {
       {
         Effect    = "Allow"
         Principal = "*"
-        Action    = "s3/*"
+        Action    = "s3:*"
         Resource  = "arn:aws:s3:::rehanbucketterraform/*"
       }
     ]
