@@ -32,13 +32,13 @@ resource "aws_s3_object" "index" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "index.html"
   acl    = "public-read"
-  contant_type = "text/html"
+  content_type = "text/html"
   }
 resource "aws_s3_object" "error" {
   bucket = aws_s3_bucket.mybucket.id
   key    = "error.html"
   acl    = "public-read"
-  contant_type = "text/html"
+  content_type = "text/html"
   }
 resource "aws_s3_bucket_website_configuration" "website" {
   bucket = aws_s3_bucket.mybucket.id
